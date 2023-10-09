@@ -30,7 +30,9 @@ app.get('/frases/:keywords/:pages', async (req, res) => {
     }
     
 
-    res.json(frases);
+    res.json({
+      frases
+    });
   } catch (error) {
     console.error('Erro ao obter frases:', error);
     res.status(500).json({ error: 'Erro ao obter frases' });
