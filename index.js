@@ -15,7 +15,7 @@ app.get('/frases/:keywords/:pages', async (req, res) => {
       if(i === 1 ) {
          response = await axios.get(`https://www.pensador.com/${keywords}/`);
       } else {
-        response = await axios.get(`https://www.pensador.com/${keywords}/${pages}/`);
+        response = await axios.get(`https://www.pensador.com/${keywords}/${i}/`);
       }
     
     const pensador = cheerio.load(response.data);
